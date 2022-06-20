@@ -10,7 +10,7 @@ const Pokemon = ({ pokemon }) => {
 export default function Pokemones({ pokemones }) {
   return (
     <div>
-      <p>Pokemones</p>
+      <p>Mi Pokemones</p>
       <ul>
         {pokemones.map(pokemon => <Pokemon pokemon={pokemon} key={pokemon.name} />)}
       </ul>
@@ -18,7 +18,7 @@ export default function Pokemones({ pokemones }) {
   )
 }
 
-export const getStaticProps = async () => { //indica que la pagina va a ser estatica
+export const getStaticProps = async () => { //shows that the page is going to be static
   const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
   const data = await response.json()
 
